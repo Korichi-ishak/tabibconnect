@@ -25,6 +25,12 @@ npm run dev
 ```
 > L'API sera accessible sur : **http://localhost:3001**
 
+## 🌐 Liens de production (Live)
+
+- **Frontend (Vercel)** : *Votre lien Vercel*
+- **Backend (Render)** : [https://tabibconnect-api.onrender.com](https://tabibconnect-api.onrender.com)
+
+
 ## 📂 Structure
 
 - **client/** : Code source React (Pages, Composants, Styles)
