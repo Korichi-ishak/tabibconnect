@@ -1,0 +1,289 @@
+/* Doctor Dashboard Styles */
+.calendar-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.calendar-day-header {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.calendar-day-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  text-align: center;
+  padding: 8px;
+}
+
+.calendar-time-row {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  gap: 8px;
+}
+
+.calendar-time-label {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+.calendar-slot {
+  border: 1px solid var(--dash-border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  min-height: 50px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.calendar-slot:hover {
+  border-color: var(--primary);
+  background: rgba(14, 164, 122, 0.05);
+}
+
+.calendar-slot.booked {
+  background: rgba(14, 164, 122, 0.1);
+  border-color: var(--primary);
+}
+
+.calendar-slot.booked .slot-patient {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.calendar-slot.booked .slot-type {
+  font-size: 0.68rem;
+  color: var(--gray-500);
+}
+
+/* Consultation Page */
+.consultation-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+}
+
+.consultation-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patient-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-option {
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--dash-border);
+  background: transparent;
+  color: var(--dash-text);
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patient-option:hover {
+  border-color: var(--primary);
+  background: rgba(14, 164, 122, 0.05);
+}
+
+.patient-option.active {
+  border-color: var(--primary);
+  background: rgba(14, 164, 122, 0.1);
+}
+
+.consultation-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.consultation-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid var(--dash-border);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.03);
+  color: var(--dash-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.consultation-textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.consultation-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* AI Assistant */
+.ai-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 180px);
+}
+
+.ai-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.ai-message {
+  display: flex;
+  gap: 12px;
+  max-width: 85%;
+}
+
+.ai-message.bot { align-self: flex-start; }
+.ai-message.user { align-self: flex-end; flex-direction: row-reverse; }
+
+.ai-message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.ai-message.bot .ai-message-avatar {
+  background: rgba(14, 164, 122, 0.15);
+  color: var(--primary-light);
+}
+
+.ai-message.user .ai-message-avatar {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--info);
+}
+
+.ai-message-content {
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.ai-message.bot .ai-message-content {
+  background: rgba(14, 164, 122, 0.06);
+  color: var(--dash-text);
+  border: 1px solid rgba(14, 164, 122, 0.1);
+}
+
+.ai-message.user .ai-message-content {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--dash-text);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.ai-input-bar {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--dash-border);
+}
+
+.ai-input-bar input {
+  flex: 1;
+}
+
+/* Teleconsultation */
+.teleconsult-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 24px;
+  height: calc(100vh - 180px);
+}
+
+.video-area {
+  position: relative;
+  background: var(--dash-surface);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dash-border);
+}
+
+.video-placeholder {
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.video-placeholder .video-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(14, 164, 122, 0.15);
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 2rem;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.video-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all var(--transition-fast);
+}
+
+.video-btn.active { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); }
+.video-btn.end { background: var(--danger); }
+.video-btn:hover { transform: scale(1.1); }
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .consultation-layout { grid-template-columns: 1fr; }
+  .teleconsult-layout { grid-template-columns: 1fr; }
+}

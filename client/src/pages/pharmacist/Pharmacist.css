@@ -1,0 +1,69 @@
+.pharma-prescriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pharma-rx-card {
+  padding: 20px;
+}
+
+.pharma-rx-card.urgent {
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.05);
+}
+
+.pharma-rx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pharma-rx-header strong {
+  display: block;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.pharma-rx-header span {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+}
+
+.pharma-rx-meds {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pharma-med-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--dash-border);
+}
+
+.pharma-med-item span:first-child {
+  font-size: 0.88rem;
+  color: var(--dash-text);
+  font-weight: 500;
+  flex: 1;
+}
+
+.pharma-med-item span:nth-child(2) {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  margin-right: 12px;
+}
+
+.pharma-rx-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
