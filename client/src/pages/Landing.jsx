@@ -66,8 +66,8 @@ export default function Landing() {
                 <div className="mock-header">
                   <div className="mock-avatar">A</div>
                   <div>
-                    <div className="mock-name">Dr. Djebabla Darine</div>
-                    <div className="mock-sub">Cardiologie • Annaba</div>
+                    <div className="mock-name">Dr.Rayane Djebablia</div>
+                    <div className="mock-sub">Radiologie • Annaba</div>
                   </div>
                   <span className="badge badge-success">Disponible</span>
                 </div>
