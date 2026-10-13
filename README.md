@@ -1,46 +1,56 @@
-# TabibConnect — Prototype HealthTech
+# TabibConnect — prototype de plateforme santé
 
-Bienvenue dans le prototype complet de **TabibConnect**.
+Prototype cliquable d'une plateforme médicale pour l'Algérie, avec un espace pour chaque acteur : patient, médecin, clinique et pharmacien. Les données sont fictives : le but est de montrer tous les parcours de bout en bout.
 
-## 🚀 Comment lancer le projet
+## Les quatre espaces
 
-Ce projet est divisé en deux parties : le frontend (React) et le backend (Node.js).
-Vous devez lancer les deux terminaux séparément.
+| Espace | Ce qu'on y fait |
+|---|---|
+| **Patient** | Chercher un médecin, prendre et suivre ses rendez-vous, consulter son dossier médical et ses ordonnances |
+| **Médecin** | Tableau de bord, agenda, liste des patients, consultation, téléconsultation, assistant IA |
+| **Clinique** | File d'attente, praticiens, stock, facturation |
+| **Pharmacien** | Ordonnances reçues |
 
-### 1. Lancer le Frontend (Site Web)
-Ouvrez un terminal et exécutez :
+On trouve aussi une page d'accueil publique, une connexion et une inscription.
+
+## Stack
+
+- **Client** : React · Vite · React Router · Lucide
+- **API** : Node.js · Express (données de démonstration : médecins, statistiques)
+
+## Lancer en local
+
+Deux terminaux :
+
 ```bash
-cd client
-npm install  # Si première fois
-npm run dev
-```
-> Le site sera accessible sur : **http://localhost:5173**
-
-### 2. Lancer le Backend (API)
-Ouvrez un **deuxième** terminal et exécutez :
-```bash
+# API — http://localhost:3001
 cd server
-npm install  # Si première fois
+npm install
 npm run dev
 ```
-> L'API sera accessible sur : **http://localhost:3001**
 
-## 🌐 Liens de production (Live)
+```bash
+# Interface
+cd client
+npm install
+npm run dev
+```
 
-- **Frontend (Vercel)** : *Votre lien Vercel*
-- **Backend (Render)** : [https://tabibconnect-api.onrender.com](https://tabibconnect-api.onrender.com)
+## Structure
 
+```
+client/src/pages/patient/      espace patient
+client/src/pages/doctor/       espace médecin
+client/src/pages/clinic/       espace clinique
+client/src/pages/pharmacist/   espace pharmacien
+client/src/data/mockData.js    données fictives
+server/server.js               API de démonstration
+```
 
-## 📂 Structure
+## État
 
-- **client/** : Code source React (Pages, Composants, Styles)
-- **server/** : API Express (Données mock, Routes)
+Prototype de démonstration : pas de base de données ni d'authentification réelle.
 
-## 🔑 Comptes de démo
+---
 
-Vous pouvez utiliser n'importe quel email/mot de passe, ou utiliser les boutons de remplissage automatique si disponibles.
-
-- **Patient** : Accès au dashboard patient, prise de RDV
-- **Médecin** : Accès au calendrier, gestion patients
-- **Clinique** : Vue d'ensemble, stocks, facturation
-- **Pharmacien** : Validation des ordonnances
+Réalisé par **Ishak Korichi** · [korichi-ishak.vercel.app](https://korichi-ishak.vercel.app)
